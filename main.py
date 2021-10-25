@@ -1,3 +1,7 @@
+for i in range(5):
+    print ('A number:', i)
+    print ('hello world') 
+
 HANGMANPICS = ['''
   +---+
   |   |
@@ -140,3 +144,9 @@ while True:
             secretWord = getRandomWord(words)
         else:
             break
+
+
+
+
+
+//hang man script// 
