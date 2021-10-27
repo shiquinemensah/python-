@@ -1,6 +1,4 @@
-for i in range(5):
-    print ('A number:', i)
-    print ('hello world') 
+import random
 
 HANGMANPICS = ['''
   +---+
@@ -54,8 +52,8 @@ HANGMANPICS = ['''
 =========''']
 
 
-words = 'ant baboon badger bat bear beaver camel cat clam cobra cougar coyote crow deer dog donkey duck eagle ferret fox frog goat goose hawk lion lizard llama mole monkey moose mouse mule newt otter owl panda parrot pigeon python rabbit ram rat raven rhino salmon seal shark sheep skunk sloth snake spider stork swan tiger toad trout turkey turtle weasel whale wolf wombat zebra'.split()
-
+#words = 'ant baboon badger bat bear beaver camel cat clam cobra cougar coyote crow deer dog donkey duck eagle ferret fox frog goat goose hawk lion lizard llama mole monkey moose mouse mule newt otter owl panda parrot pigeon python rabbit ram rat raven rhino salmon seal shark sheep skunk sloth snake spider stork swan tiger toad trout turkey turtle weasel whale wolf wombat zebra'.split()
+words = 'buzz buff cozy fluff fluffy fizz fizzy fox jinx lucky puff puffy puzzle quiz uck eagle ferret fox frog goat goose hawk lion lizard llama mole '
 
 def getRandomWord(wordList):
 
@@ -88,7 +86,7 @@ def getGuess(alreadyGuessed):
         if len(guess) != 1:
             print('Please enter a single letter.')
         elif guess in alreadyGuessed:
-            print('You have already guessed that letter. Choose again.')
+            print('Yo bro you have already used this letter. try again.')
         elif guess not in 'abcdefghijklmnopqrstuvwxyz':
             print('Please enter a LETTER.')
         else:
@@ -98,7 +96,7 @@ def playAgain():
     vars()
 
 
-    print('Do you want to play again? (yes or no)')
+    print('Do you want to play again? or you too scared (yes or no)')
     return input().lower().startswith('y')
 
 
@@ -124,7 +122,7 @@ while True:
                 foundAllLetters = False
                 break
         if foundAllLetters:
-            print('Yes! The secret word is "' + secretWord + '"! You have won!')
+            print('Yes! The secret word is "' + secretWord + '"! well done you have won!')
             gameIsDone = True
     else:
         missedLetters = missedLetters + guess
@@ -144,9 +142,3 @@ while True:
             secretWord = getRandomWord(words)
         else:
             break
-
-
-
-
-
-//hang man script// 
